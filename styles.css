@@ -145,10 +145,17 @@ form button:hover {
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
+.hero {
+    width: 100vw; /* Ensures the hero section spans the full width of the viewport */
+    height: auto;
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;
+}
 
 .social-media img.tiktok,
 .social-media img.youtube {
-    transform: scale(1.2); /* Increases size by 120% */
+    transform: scale(2); /* Increases size by 120% */
 }
 
 /* Footer */
