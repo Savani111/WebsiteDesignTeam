@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Fright - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="logo.png" alt="Stage Fright Logo" class="logo">
+            <h1>Stage Fright</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our_story.html">Our Story</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Stage Fright</h1>
+            <p>Your destination for progressive and experimental rock.</p>
+        </section>
+        <section class="featured">
+            <h2>Our Upcoming Tour</h2>
+            <p>Join us for the Fright Fest Tour! Tickets available now.</p>
+            <a href="tour.html" class="cta">Learn More</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stage Fright. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
+            <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="tiktok_icon.png" alt="TikTok"></a>
+            <a href="#"><img src="youtube_icon.png" alt="YouTube"></a>
+        </div>
+    </footer>
+</body>
+</html>
