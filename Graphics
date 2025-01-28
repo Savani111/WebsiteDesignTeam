@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #581414; /* Deep red background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #450f0f; /* Slightly darker red for the header */
+}
+
+header .logo-title {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ffb3b3; /* Light pink highlight for active or hovered links */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #450f0f; /* Slightly darker red for hero sections */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Featured, Ticket Prices, and Products */
+.featured,
+.ticket-prices,
+.products,
+.contact-form {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    border: 2px solid #ffb3b3; /* Light pink border */
+    border-radius: 10px;
+    background-color: #450f0f; /* Slightly darker background for cards */
+}
+
+.products .product {
+    margin: 1rem auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.products .product img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.products .product button {
+    background-color: #ffb3b3;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #450f0f;
+    transition: background-color 0.3s;
+}
+
+.products .product button:hover {
+    background-color: #ffe5e5;
+}
+
+/* Forms */
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ffb3b3;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ffb3b3;
+    color: #450f0f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffe5e5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #450f0f; /* Slightly darker footer background */
+    color: #ffffff;
+}
+
+footer .social-media a img {
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+footer .social-media a img:hover {
+    transform: scale(1.2);
+}
+
+
