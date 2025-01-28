@@ -140,6 +140,17 @@ form button:hover {
     background-color: #ffe5e5;
 }
 
+.social-media img {
+    width: 40px; /* Default size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media img.tiktok,
+.social-media img.youtube {
+    transform: scale(1.2); /* Increases size by 120% */
+}
+
 /* Footer */
 footer {
     text-align: center;
