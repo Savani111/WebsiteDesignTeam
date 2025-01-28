@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Fright - Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="logo.png" alt="Stage Fright Logo" class="logo">
+            <h1>Stage Fright</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our_story.html">Our Story</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="tickets.html" class="active">Tickets</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Tickets</h1>
+            <p>Get your tickets now for the Fright Fest Tour!</p>
+        </section>
+        <section class="ticket-prices">
+            <h2>Ticket Options</h2>
+            <ul>
+                <li>General Admission: $45</li>
+                <li>Meet and Greet (Additional): $25</li>
+                <li>Front Row Seats: $65</li>
+                <li>Exclusive Backstage Tour Experience (Additional): $55</li>
+            </ul>
+            <a href="#" class="cta">Buy Tickets</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stage Fright. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
+            <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="tiktok_icon.png" alt="TikTok"></a>
+            <a href="#"><img src="youtube_icon.png" alt="YouTube"></a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
