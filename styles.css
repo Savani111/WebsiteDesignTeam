@@ -146,6 +146,48 @@ form button:hover {
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
+.albums {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #581414; /* Matching background color */
+    color: white;
+}
+
+.albums h2 {
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.album-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.album {
+    width: 200px;
+    text-align: center;
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.album img:hover {
+    transform: scale(1.05);
+}
+
+.album p {
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-transform: lowercase;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&display=swap');
 body {
