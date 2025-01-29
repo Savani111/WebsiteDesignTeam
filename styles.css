@@ -188,30 +188,33 @@ form button:hover {
     margin-top: 10px;
     text-transform: lowercase;
 }
+
+.members {
+    text-align: center;
+    padding: 2rem;
+}
+
 .member-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
-    margin: 2rem auto;
-    max-width: 80%;
+    margin-bottom: 2rem;
 }
 
-.member-container .member-image {
-    flex: 1;
-    max-width: 50%;
-}
-
-.member-container .member-image img {
-    width: 100%;
+.member-container img {
+    width: 40%;
     height: auto;
     border-radius: 10px;
 }
 
-.member-container .member-info {
-    flex: 1;
-    max-width: 50%;
+.member-info {
+    width: 50%;
     text-align: left;
+}
+
+.member-container.reverse {
+    flex-direction: row-reverse;
 }
 
 .reverse {
