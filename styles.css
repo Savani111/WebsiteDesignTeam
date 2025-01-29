@@ -65,6 +65,7 @@ nav ul li a.active {
 
 .hero p {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 /* Featured, Ticket Prices, and Products */
