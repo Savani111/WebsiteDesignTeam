@@ -147,10 +147,9 @@ form button:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-
-.social-media img.tiktok,
-.social-media img.youtube {
-    transform: scale(2); /* Increases size by 120% */
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&display=swap');
+body {
+    font-family: 'Hedvig Letters Serif', serif;
 }
 
 /* Footer */
