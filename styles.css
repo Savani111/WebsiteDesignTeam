@@ -188,6 +188,35 @@ form button:hover {
     margin-top: 10px;
     text-transform: lowercase;
 }
+.member-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 80%;
+}
+
+.member-container .member-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.member-container .member-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.member-container .member-info {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&display=swap');
 body {
