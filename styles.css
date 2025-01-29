@@ -188,33 +188,30 @@ form button:hover {
     margin-top: 10px;
     text-transform: lowercase;
 }
-
-.members {
-    text-align: center;
-    padding: 2rem;
-}
-
 .member-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
+    max-width: 80%;
 }
 
-.member-container img {
-    width: 40%;
+.member-container .member-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.member-container .member-image img {
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.member-info {
-    width: 50%;
+.member-container .member-info {
+    flex: 1;
+    max-width: 50%;
     text-align: left;
-}
-
-.member-container.reverse {
-    flex-direction: row-reverse;
 }
 
 .reverse {
@@ -243,5 +240,3 @@ footer .social-media a img {
 footer .social-media a img:hover {
     transform: scale(1);
 }
-
-
