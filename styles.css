@@ -67,6 +67,37 @@ nav ul li a.active {
     font-size: 1.2rem;
     text-align: center;
 }
+/* Center the banner image */
+.tour-banner {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full viewport height */
+}
+
+/* Image inside the tour-banner */
+.tour-banner-image {
+    max-width: 100%;           /* Prevent stretching */
+    max-height: 100%;          /* Prevent stretching */
+    object-fit: contain;       /* Preserve aspect ratio */
+}
+
+/* Center the tour-inspiration section */
+.tour-inspiration {
+    display: flex;
+    flex-direction: column;    /* Stack elements vertically */
+    justify-content: center;   /* Center content vertically */
+    align-items: center;       /* Center content horizontally */
+    height: 100vh;             /* Full viewport height */
+    text-align: center;        /* Center the text */
+}
+
+/* Image inside the tour-inspiration section */
+.tour-inspo-image {
+    max-width: 80%;   /* Limit the width */
+    height: auto;     /* Maintain aspect ratio */
+    margin-top: 20px;  /* Add some space between text and image */
+}
 
 /* Featured, Ticket Prices, and Products */
 .featured,
