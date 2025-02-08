@@ -72,14 +72,15 @@ nav ul li a.active {
     display: flex;
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
-    height: 100vh;            /* Full viewport height */
+    width: 100%;
+    height: auto;            /* Full viewport height */
 }
 
 /* Image inside the tour-banner */
 .tour-banner-image {
-    max-width: 100%;           /* Prevent stretching */
-    max-height: 100%;          /* Prevent stretching */
-    object-fit: contain;       /* Preserve aspect ratio */
+    width: 100%;           /* Prevent stretching */
+    height: auto;          /* Prevent stretching */
+    object-fit: cover;       /* Preserve aspect ratio */
 }
 
 /* Center the tour-inspiration section */
