@@ -99,6 +99,15 @@ nav ul li a.active {
     margin-top: 20px;  /* Add some space between text and image */
 }
 
+/*Moves the tour text separate from the images*/
+.tour-content {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
 /* Featured, Ticket Prices, and Products */
 .featured,
 .ticket-prices,
