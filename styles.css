@@ -122,11 +122,7 @@ nav ul li a.active {
     border: 2px solid #601414; /* Light pink border */
     border-radius: 10px;
     background-color: #450f0f; /* Slightly darker background for cards */
-    display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
-    width: 100%;
-    height: auto; 
+
 }
 
 .products .product {
