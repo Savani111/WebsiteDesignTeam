@@ -89,8 +89,9 @@ nav ul li a.active {
     flex-direction: column;    /* Stack elements vertically */
     justify-content: center;   /* Center content vertically */
     align-items: center;       /* Center content horizontally */
-    height: 100vh;             /* Full viewport height */
-    text-align: center;        /* Center the text */
+    height: auto;             /* Full viewport height */
+    text-align: center;  /* Center the text */
+    width: 100%;
 }
 
 /* Image inside the tour-inspiration section */
