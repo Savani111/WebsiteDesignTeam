@@ -30,3 +30,27 @@ window.onload = function () {
 
 window.onresize = adjustLayout;
 
+function fixHeader() {
+    let header = document.querySelector("nav");
+    header.style.width = "100%"; // Ensure the header spans the full width
+    header.style.overflowX = "hidden"; // Prevent it from overflowing
+}
+
+// Run this function on page load and resize
+window.onload = fixHeader;
+window.onresize = fixHeader;
+
+function fixSpacing() {
+    let sections = document.querySelectorAll("section");
+
+    sections.forEach(section => {
+        section.style.margin = "0 auto"; // Centers sections
+        section.style.width = "90%"; // Prevents them from being too wide
+    });
+}
+
+// Run this function on page load and resize
+window.onload = fixSpacing;
+window.onresize = fixSpacing;
+
+
