@@ -1,35 +1,285 @@
-function fixLayout() {
-    let banner = document.querySelector(".tour-banner");
-    let inspiration = document.querySelector(".tour-inspiration");
-
-    if (banner) {
-        banner.style.height = "100vh";
-        console.log("Fixed banner height");
-    }
-    
-    if (inspiration) {
-        inspiration.style.height = "100vh";
-        console.log("Fixed tour inspiration height");
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #581414; /* Deep red background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
 }
 
-// Fix header width
-function fixHeader() {
-    let header = document.querySelector("header");
-
-    if (header) {
-        header.style.width = "100%";
-        console.log("Fixed header width");
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #450f0f; /* Slightly darker red for the header */
 }
 
-// Run these functions on page load and window resize
-window.onload = function () {
-    fixLayout();
-    fixHeader();
-};
+header .logo-title {
+    display: flex;
+    align-items: center;
+}
 
-window.onresize = function () {
-    fixLayout();
-    fixHeader();
-};
+header .logo {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ffb3b3; /* Light pink highlight for active or hovered links */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #450f0f; /* Slightly darker red for hero sections */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+/* Center the banner image */
+.tour-banner {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    width: 100%;
+    height: auto;            /* Full viewport height */
+}
+
+/* Image inside the tour-banner */
+.tour-banner-image {
+    width: 100%;           /* Prevent stretching */
+    height: auto;          /* Prevent stretching */
+    object-fit: cover;       /* Preserve aspect ratio */
+}
+
+/* Center the tour-inspiration section */
+.tour-inspiration {
+    display: flex;
+    flex-direction: column;    /* Stack elements vertically */
+    justify-content: center;   /* Center content vertically */
+    align-items: center;       /* Center content horizontally */
+    height: auto;             /* Full viewport height */
+    text-align: center;  /* Center the text */
+    width: 100%;
+}
+
+/* Image inside the tour-inspiration section */
+.tour-inspo-image {
+    max-width: 80%;   /* Limit the width */
+    height: auto;     /* Maintain aspect ratio */
+    margin-top: 20px;  /* Add some space between text and image */
+}
+
+/*Moves the tour text separate from the images*/
+.tour-content {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Featured, Ticket Prices, and Products */
+.featured,
+.ticket-prices,
+.products,
+.contact-form {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    border: 2px solid #601414; /* Light pink border */
+    border-radius: 10px;
+    background-color: #450f0f; /* Slightly darker background for cards */
+
+}
+
+.products .product {
+    margin: 1rem auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.products .product img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.products .product button {
+    background-color: #ffb3b3;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #450f0f;
+    transition: background-color 0.3s;
+}
+
+.products .product button:hover {
+    background-color: #ffe5e5;
+}
+
+/* Forms */
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ffb3b3;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ffb3b3;
+    color: #450f0f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffe5e5;
+}
+
+.social-media img {
+    width: 40px; /* Default size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.albums {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #581414; /* Matching background color */
+    color: white;
+}
+
+.albums h2 {
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.album-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.album {
+    width: 200px;
+    text-align: center;
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.album img:hover {
+    transform: scale(1.05);
+}
+
+.album p {
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-transform: lowercase;
+}
+.member-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 80%;
+}
+
+.member-container .member-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.member-container .member-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.member-container .member-info {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&display=swap');
+body {
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #450f0f; /* Slightly darker footer background */
+    color: #ffffff;
+}
+
+footer .social-media a img {
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+footer .social-media a img:hover {
+    transform: scale(1);
+}
