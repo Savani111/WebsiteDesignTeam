@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Hedvig Letters Serif', serif;
     background-color: #581414; /* Deep red background */
     color: #ffffff; /* White text */
     line-height: 1.6;
@@ -230,7 +230,7 @@ form button:hover {
 }
 
 .album p {
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'Hedvig Letters Serif', serif;
     font-size: 1rem;
     margin-top: 10px;
     text-transform: lowercase;
