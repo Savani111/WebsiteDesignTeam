@@ -110,6 +110,14 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
+.tour-image {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
 /* Featured, Ticket Prices, and Products */
 .featured,
 .ticket-prices,
