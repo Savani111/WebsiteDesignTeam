@@ -209,6 +209,10 @@ form button:hover {
     flex-wrap: wrap;
 }
 
+.album p {
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
 .album {
     width: 200px;
     text-align: center;
