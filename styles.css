@@ -776,10 +776,12 @@ select {
         width: 80%;
         max-width: 300px;
         height: 100vh;
-        background-color: #1a1a1a;
-        padding: 20px;
+        background-color: #450f0f;
+        padding: 80px 20px 20px;
         transition: right 0.3s ease-in-out;
         z-index: 999;
+        overflow-y: auto;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
     }
 
     nav.active {
@@ -791,11 +793,12 @@ select {
         align-items: flex-start;
         padding: 0;
         margin: 0;
+        width: 100%;
     }
 
     nav ul li {
         width: 100%;
-        margin: 10px 0;
+        margin: 0;
     }
 
     nav ul li a {
@@ -805,11 +808,12 @@ select {
         text-decoration: none;
         font-size: 1.2rem;
         transition: all 0.3s ease;
+        width: 100%;
     }
 
     nav ul li a:hover {
-        background-color: #333;
-        color: #ffd700;
+        background-color: #581414;
+        color: #ffb3b3;
     }
 }
 
