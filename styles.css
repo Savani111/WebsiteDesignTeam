@@ -1,5 +1,29 @@
-body {
+/* Add these vendor prefixes and responsive meta rules at the top */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+/* Base responsive container */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Responsive typography */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
     font-family: 'Hedvig Letters Serif', serif;
     background-color: #581414; /* Deep red background */
     color: #ffffff; /* White text */
@@ -7,10 +31,12 @@ body {
 }
 
 header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;  /* Reduced padding for mobile */
     background-color: #450f0f; /* Slightly darker red for the header */
 }
 
@@ -81,6 +107,11 @@ nav ul li a.active {
     width: 100%;           /* Prevent stretching */
     height: auto;          /* Prevent stretching */
     object-fit: cover;       /* Preserve aspect ratio */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);  /* Standard property should come last */
 }
 
 /* Center the tour-inspiration section */
@@ -234,6 +265,10 @@ form button:hover {
 }
 
 .album img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -278,6 +313,22 @@ body {
     font-family: 'Hedvig Letters Serif', serif;
 }
 
+h1, h2, h3, h4, h5, h6,
+nav ul li a,
+.hero p,
+.tour-content,
+form label,
+form input,
+form button,
+.products .product button,
+.featured,
+.ticket-prices,
+.products,
+.contact-form,
+.member-info {
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -286,12 +337,379 @@ footer {
     color: #ffffff;
 }
 
+/* Base styles for footer social media icons */
+footer .social-media a {
+    display: inline-block;
+    margin: 0 15px;
+}
+
 footer .social-media a img {
-    height: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s;
+    width: 25px;     /* Default size for mobile */
+    height: 25px;
+    margin: 0;
+    transition: transform 0.3s ease;
 }
 
 footer .social-media a img:hover {
-    transform: scale(1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);  /* Standard property should come last */
+}
+
+/* Tablet sizes */
+@media screen and (min-width: 768px) {
+    footer .social-media a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Desktop sizes */
+@media screen and (min-width: 1024px) {
+    footer .social-media a img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Mobile-first responsive rules */
+@media screen and (max-width: 768px) {
+    /* Navigation menu for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    /* Adjust member container for mobile */
+    .member-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .member-container .member-image,
+    .member-container .member-info {
+        max-width: 100%;
+    }
+
+    /* Adjust featured sections for mobile */
+    .featured,
+    .ticket-prices,
+    .products,
+    .contact-form {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    /* Adjust hero section for mobile */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .member-container {
+        max-width: 90%;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
+/* Large desktop styles */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Cross-browser compatibility for flexbox */
+.album-container,
+.member-container,
+.tour-banner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* Add smooth scrolling for all browsers */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Cross-browser image optimizations */
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+/* Add support for older browsers */
+@supports not (display: flex) {
+    .album-container,
+    .member-container {
+        display: block;
+    }
+    
+    .album,
+    .member-container .member-image,
+    .member-container .member-info {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+/* Ensure proper rendering of form elements across browsers */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Add touch-friendly interactions for mobile */
+@media (hover: hover) and (pointer: fine) {
+    .album img:hover,
+    nav ul li a:hover,
+    .products .product button:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: none;
+        color: black;
+    }
+    
+    .tour-banner,
+    .social-media,
+    nav {
+        display: none;
+    }
+}
+
+/* Device-specific breakpoints and rules */
+
+/* Small phones (iPhone SE, smaller Android phones) */
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .member-container {
+        padding: 0 10px;
+    }
+}
+
+/* Regular phones (iPhone, Android phones) */
+@media screen and (min-width: 376px) and (max-width: 767px) {
+    html {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* iPads and Tablets (Portrait) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .member-container {
+        gap: 1.5rem;
+    }
+
+    /* Adjust layout for better tablet viewing */
+    .album-container {
+        gap: 15px;
+    }
+
+    .album {
+        width: calc(33.333% - 20px);
+    }
+}
+
+/* iPads and Tablets (Landscape) */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Laptops and Small Desktops */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Large Desktops and Monitors */
+@media screen and (min-width: 1367px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Device-specific features */
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets for better touch interaction */
+    nav ul li a,
+    .products .product button,
+    form button {
+        padding: 12px 20px;
+        min-height: 44px; /* Apple's recommended minimum */
+    }
+
+    /* Remove hover effects on touch devices */
+    .album img:hover,
+    nav ul li a:hover,
+    .products .product button:hover {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+}
+
+/* High-DPI devices (Retina displays) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Device orientation changes */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    /* Adjustments for landscape mode on phones */
+    .hero {
+        padding: 1rem;
+    }
+
+    .member-container {
+        flex-direction: row;
+    }
+}
+
+/* iPadOS specific */
+@supports (-webkit-touch-callout: none) {
+    /* iPad-specific styles */
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Safari-specific fixes */
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        /* Safari-specific adjustments */
+        .tour-banner-image {
+            -webkit-transform: translateZ(0);
+        }
+    }
+}
+
+/* Foldable devices */
+@media (max-width: 280px) {
+    /* Galaxy Fold and similar devices when folded */
+    html {
+        font-size: 12px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Add these utility classes for device-specific visibility */
+.hide-on-mobile {
+    display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+    .hide-on-mobile {
+        display: block !important;
+    }
+    
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        background: none;
+        color: black;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
 }
