@@ -761,6 +761,7 @@ select {
 
     nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
@@ -768,9 +769,33 @@ select {
         text-align: center;
     }
 
-    /* Hide regular navigation items on mobile */
-    header nav {
+    /* Hamburger menu animation */
+    .mobile-nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Add overlay when menu is open */
+    .nav-overlay {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+
+    .nav-overlay.active {
+        display: block;
     }
 }
 
