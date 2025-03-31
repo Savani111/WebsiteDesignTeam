@@ -22,23 +22,11 @@ function detectBrowser() {
     }
 }
 
-// Run functions on page load and window resize
-window.onload = function () {
-    adjustLayout();
-    detectBrowser();
-};
-
-window.onresize = adjustLayout;
-
 function fixHeader() {
     let header = document.querySelector("nav");
     header.style.width = "100%"; // Ensure the header spans the full width
     header.style.overflowX = "hidden"; // Prevent it from overflowing
 }
-
-// Run this function on page load and resize
-window.onload = fixHeader;
-window.onresize = fixHeader;
 
 function fixSpacing() {
     let sections = document.querySelectorAll("section");
@@ -49,10 +37,7 @@ function fixSpacing() {
     });
 }
 
-// Run this function on page load and resize
-window.onload = fixSpacing;
-window.onresize = fixSpacing;
-
+// Mobile Navigation
 document.addEventListener('DOMContentLoaded', function() {
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const nav = document.querySelector('nav');
@@ -63,12 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.className = 'nav-overlay';
     body.appendChild(overlay);
 
-    mobileNavToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        nav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
-    });
+    // Toggle mobile menu
+    if (mobileNavToggle) {
+        mobileNavToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+        });
+    }
 
     // Close menu when clicking overlay
     overlay.addEventListener('click', function() {
@@ -89,6 +77,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Run all initialization functions
+window.onload = function() {
+    adjustLayout();
+    detectBrowser();
+    fixHeader();
+    fixSpacing();
+};
+
+// Run layout adjustments on window resize
+window.onresize = function() {
+    adjustLayout();
+    fixHeader();
+    fixSpacing();
+};
 
 <script src="script.js"></script>
 

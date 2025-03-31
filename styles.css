@@ -745,28 +745,50 @@ select {
 
     nav {
         display: none;  /* Hide regular nav on mobile */
-    }
-
-    nav.active {
-        display: block;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;  /* Start off-screen */
         width: 70%;
         height: 100vh;
         background-color: #450f0f;
         padding-top: 60px;
         z-index: 999;
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;  /* Allow scrolling if menu is too long */
+    }
+
+    nav.active {
+        display: block;
+        right: 0;  /* Slide in from right */
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;  /* Ensure full width */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 15px 0;
+        width: 100%;
         text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;  /* Larger touch target */
+        font-size: 1.2rem;
+        color: #ffffff;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        background-color: #581414;  /* Slightly lighter background on hover */
+        color: #ffb3b3;
     }
 
     /* Hamburger menu animation */
@@ -792,6 +814,7 @@ select {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 998;
+        transition: opacity 0.3s ease-in-out;
     }
 
     .nav-overlay.active {
@@ -807,5 +830,10 @@ select {
 
     nav {
         display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        padding: 0;
     }
 }
