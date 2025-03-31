@@ -53,4 +53,41 @@ function fixSpacing() {
 window.onload = fixSpacing;
 window.onresize = fixSpacing;
 
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const nav = document.querySelector('nav');
+    const body = document.body;
+
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    body.appendChild(overlay);
+
+    mobileNavToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', function() {
+        mobileNavToggle.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    });
+
+    // Close menu when clicking a nav link
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileNavToggle.classList.remove('active');
+            nav.classList.remove('active');
+            overlay.classList.remove('active');
+            body.style.overflow = '';
+        });
+    });
+});
+
 
