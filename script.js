@@ -99,6 +99,4 @@ window.onresize = function() {
     fixSpacing();
 };
 
-<script src="script.js"></script>
-
 
