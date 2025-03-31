@@ -39,9 +39,13 @@ function fixSpacing() {
 
 // Mobile Navigation
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM Content Loaded'); // Debug line
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const nav = document.querySelector('nav');
     const body = document.body;
+
+    console.log('Mobile Nav Toggle:', mobileNavToggle); // Debug line
+    console.log('Nav:', nav); // Debug line
 
     // Create overlay element
     const overlay = document.createElement('div');
@@ -50,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle mobile menu
     if (mobileNavToggle) {
-        mobileNavToggle.addEventListener('click', function() {
+        mobileNavToggle.addEventListener('click', function(e) {
+            console.log('Toggle clicked'); // Debug line
+            e.preventDefault();
             this.classList.toggle('active');
             nav.classList.toggle('active');
             overlay.classList.toggle('active');
