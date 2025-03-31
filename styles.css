@@ -37,9 +37,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #450f0f; /* Slightly darker red for the header */
+    background-color: #450f0f;
     position: relative;
     width: 100%;
+    margin: 0;
+    border: none;
 }
 
 header .logo-title {
@@ -115,22 +117,29 @@ nav ul li a.active {
 /* Center the banner image */
 .tour-banner {
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: auto;            /* Full viewport height */
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 /* Image inside the tour-banner */
 .tour-banner-image {
-    width: 100%;           /* Prevent stretching */
-    height: auto;          /* Prevent stretching */
-    object-fit: cover;       /* Preserve aspect ratio */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
-    transform: translateZ(0);  /* Standard property should come last */
+    transform: translateZ(0);
 }
 
 /* Center the tour-inspiration section */
