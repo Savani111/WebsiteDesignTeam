@@ -1,90 +1,75 @@
-// Function to make the website responsive
+// Function to adjust layout based on screen width
 function adjustLayout() {
-    let screenWidth = window.innerWidth;
-
-    if (screenWidth < 768) {
-        document.querySelector(".tour-banner").style.height = "auto";
-        document.querySelector(".tour-banner img").style.width = "100%";
-        document.querySelector(".tour-banner img").style.objectFit = "cover";
-    } else {
-        document.querySelector(".tour-banner").style.height = "100vh";
+    const width = window.innerWidth;
+    const nav = document.querySelector('nav');
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
+    
+    if (width < 768) {
+        // Mobile view
+        if (nav && mobileToggle) {
+            nav.classList.remove('active');
+            mobileToggle.classList.remove('active');
+        }
     }
 }
 
-// Function to detect browser
+// Function to detect browser and apply specific styles
 function detectBrowser() {
-    let userAgent = navigator.userAgent;
-
-    if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
-        document.querySelector(".tour-banner img").style.objectFit = "contain";
-    } else if (userAgent.includes("Firefox")) {
-        document.querySelector("body").style.fontSize = "1.1rem";
+    const userAgent = navigator.userAgent;
+    if (userAgent.indexOf("Safari") > -1) {
+        document.body.classList.add('safari');
     }
 }
 
+// Function to fix header
 function fixHeader() {
-    let header = document.querySelector("nav");
-    header.style.width = "100%"; // Ensure the header spans the full width
-    header.style.overflowX = "hidden"; // Prevent it from overflowing
+    const header = document.querySelector('header');
+    if (header) {
+        header.style.width = '100%';
+        header.style.overflow = 'hidden';
+    }
 }
 
+// Function to fix spacing
 function fixSpacing() {
-    let sections = document.querySelectorAll("section");
-
+    const sections = document.querySelectorAll('section');
     sections.forEach(section => {
-        section.style.margin = "0 auto"; // Centers sections
-        section.style.width = "90%"; // Prevents them from being too wide
+        section.style.maxWidth = '100%';
+        section.style.margin = '0 auto';
     });
 }
 
 // Mobile Navigation
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM Content Loaded'); // Debug line
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
     const nav = document.querySelector('nav');
-    const body = document.body;
-
-    console.log('Mobile Nav Toggle:', mobileNavToggle); // Debug line
-    console.log('Nav:', nav); // Debug line
-
-    // Create overlay element
-    const overlay = document.createElement('div');
-    overlay.className = 'nav-overlay';
-    body.appendChild(overlay);
-
-    // Toggle mobile menu
-    if (mobileNavToggle) {
-        mobileNavToggle.addEventListener('click', function(e) {
-            console.log('Toggle clicked'); // Debug line
-            e.preventDefault();
+    const navLinks = document.querySelectorAll('nav a');
+    
+    if (mobileToggle && nav) {
+        mobileToggle.addEventListener('click', function() {
             this.classList.toggle('active');
             nav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
         });
     }
-
-    // Close menu when clicking overlay
-    overlay.addEventListener('click', function() {
-        mobileNavToggle.classList.remove('active');
-        nav.classList.remove('active');
-        overlay.classList.remove('active');
-        body.style.overflow = '';
-    });
-
-    // Close menu when clicking a nav link
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileNavToggle.classList.remove('active');
-            nav.classList.remove('active');
-            overlay.classList.remove('active');
-            body.style.overflow = '';
-        });
-    });
 });
 
-// Run all initialization functions
+// Initialize all functions when the window loads
 window.onload = function() {
     adjustLayout();
     detectBrowser();

@@ -54,7 +54,6 @@
 
     .mobile-nav-toggle {
         display: block;
-        position: fixed;
     }
 
     nav {
@@ -88,7 +87,6 @@
     nav ul li {
         width: 100%;
         margin: 0;
-        padding: 0;
     }
 
     nav ul li a {
@@ -101,8 +99,7 @@
         width: 100%;
     }
 
-    nav ul li a:hover,
-    nav ul li a:focus {
+    nav ul li a:hover {
         background-color: #581414;
         color: #ffb3b3;
     }
