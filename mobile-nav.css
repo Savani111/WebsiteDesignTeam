@@ -1,9 +1,7 @@
 /* Mobile Navigation Styles */
 .mobile-nav-toggle {
     display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: relative;
     z-index: 1000;
     background: none;
     border: none;
@@ -52,17 +50,24 @@
         padding: 1rem;
         position: relative;
         z-index: 1001;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .logo-title {
         position: relative;
         z-index: 1001;
+        margin-right: auto;
     }
 
     .mobile-nav-toggle {
         display: block;
         position: relative;
         z-index: 1001;
+        margin-left: auto;
+        order: 2; /* Ensure it's the last element */
     }
 
     nav {
