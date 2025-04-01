@@ -77,7 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show popup after scrolling down 20% of the page
     window.addEventListener('scroll', function() {
-        if (!hasShown && (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) > 0.2) {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        console.log('Scroll percentage:', scrollPercent); // Debug log
+
+        if (!hasShown && scrollPercent > 20) {
+            console.log('Showing popup'); // Debug log
             popup.classList.add('show');
             hasShown = true;
         }
@@ -85,15 +89,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close popup when clicking the close button
     closeButton.addEventListener('click', function() {
+        console.log('Closing popup via button'); // Debug log
         popup.classList.remove('show');
     });
 
     // Close popup when clicking outside
     document.addEventListener('click', function(event) {
         if (event.target === popup) {
+            console.log('Closing popup via outside click'); // Debug log
             popup.classList.remove('show');
         }
     });
+
+    // Show popup after 3 seconds if not shown by scrolling
+    setTimeout(function() {
+        if (!hasShown) {
+            console.log('Showing popup via timeout'); // Debug log
+            popup.classList.add('show');
+            hasShown = true;
+        }
+    }, 3000);
 });
 
 // Initialize all functions when the window loads
