@@ -150,19 +150,19 @@ nav ul li a.active {
     color: #ffffff;
     z-index: 1;
     text-shadow: 2px 2px 4px rgba(88, 20, 20, 0.8);
-    font-family: 'Metal Mania', cursive;
+    font-family: 'Rusty Attack Demo', sans-serif;
 }
 
 .banner-text h1 {
     font-size: 5.5rem;
     margin-bottom: 1rem;
-    font-family: 'Metal Mania', cursive;
+    font-family: 'Rusty Attack Demo', sans-serif;
     letter-spacing: 2px;
 }
 
 .banner-text p {
     font-size: 2.5rem;
-    font-family: 'Metal Mania', cursive;
+    font-family: 'Rusty Attack Demo', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -992,8 +992,8 @@ select {
     transform: translateY(0);
 }
 
-/* Import Celandine font */
-@import url('https://fonts.googleapis.com/css2?family=Celandine&display=swap');
-
-/* Import Gothic font */
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+/* Import Rusty Attack Demo font */
+@font-face {
+    font-family: 'Rusty Attack Demo';
+    src: url('fonts/RustyAttackDemo.ttf') format('truetype');
+}
