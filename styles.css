@@ -147,13 +147,21 @@ nav ul li a.active {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: #ffffff;
     z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Celandine', cursive;
 }
 
-.banner-text img {
-    max-width: 80%;
-    height: auto;
+.banner-text h1 {
+    font-size: 4rem;
     margin-bottom: 1rem;
+    font-family: 'Celandine', cursive;
+}
+
+.banner-text p {
+    font-size: 2rem;
+    font-family: 'Celandine', cursive;
 }
 
 /* Overlay to make text more readable */
@@ -203,7 +211,13 @@ nav ul li a.active {
 }
 
 /* Featured, Ticket Prices, and Products */
-.featured,
+.featured {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+}
+
 .ticket-prices,
 .products,
 .contact-form {
@@ -975,3 +989,6 @@ select {
 .learn-more:active {
     transform: translateY(0);
 }
+
+/* Import Celandine font */
+@import url('https://fonts.googleapis.com/css2?family=Celandine&display=swap');
