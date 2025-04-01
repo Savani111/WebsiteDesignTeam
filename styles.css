@@ -150,18 +150,18 @@ nav ul li a.active {
     color: #ffffff;
     z-index: 1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: 'Celandine', cursive;
+    font-family: 'UnifrakturMaguntia', cursive;
 }
 
 .banner-text h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
-    font-family: 'Celandine', cursive;
+    font-family: 'UnifrakturMaguntia', cursive;
 }
 
 .banner-text p {
-    font-size: 2rem;
-    font-family: 'Celandine', cursive;
+    font-size: 2.5rem;
+    font-family: 'UnifrakturMaguntia', cursive;
 }
 
 /* Overlay to make text more readable */
@@ -992,3 +992,6 @@ select {
 
 /* Import Celandine font */
 @import url('https://fonts.googleapis.com/css2?family=Celandine&display=swap');
+
+/* Import Gothic font */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
