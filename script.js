@@ -69,6 +69,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Ticket Popup Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('ticketPopup');
+    const closeButton = document.getElementById('closePopup');
+    let hasShown = false;
+
+    // Show popup after scrolling down 20% of the page
+    window.addEventListener('scroll', function() {
+        if (!hasShown && (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) > 0.2) {
+            popup.classList.add('show');
+            hasShown = true;
+        }
+    });
+
+    // Close popup when clicking the close button
+    closeButton.addEventListener('click', function() {
+        popup.classList.remove('show');
+    });
+
+    // Close popup when clicking outside
+    document.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.classList.remove('show');
+        }
+    });
+});
+
 // Initialize all functions when the window loads
 window.onload = function() {
     adjustLayout();

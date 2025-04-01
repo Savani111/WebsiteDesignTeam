@@ -997,3 +997,291 @@ select {
     font-family: 'Rusty Attack Demo';
     src: url('fonts/RUSTY ATTACK DEMO Regular.otf') format('opentype');
 }
+
+/* Booking Form */
+.booking-form {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    border: 2px solid #601414;
+    border-radius: 15px;
+    background-color: #450f0f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form h2 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.booking-form label {
+    color: #ffffff;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+    padding: 0.75rem;
+    border: 2px solid #601414;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus,
+.booking-form select:focus {
+    outline: none;
+    border-color: #ffb3b3;
+    box-shadow: 0 0 5px rgba(255, 179, 179, 0.5);
+}
+
+.booking-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.booking-form button {
+    padding: 1rem 2rem;
+    background-color: #601414;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+.booking-form button:hover {
+    background-color: #7a1919;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form button:active {
+    transform: translateY(0);
+}
+
+/* Contact Form */
+.contact-form {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    border: 2px solid #601414;
+    border-radius: 15px;
+    background-color: #450f0f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.contact-form label {
+    color: #ffffff;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 2px solid #601414;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ffb3b3;
+    box-shadow: 0 0 5px rgba(255, 179, 179, 0.5);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: #601414;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #7a1919;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+}
+
+/* Ticket Popup Styles */
+.ticket-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.ticket-popup.show {
+    display: block;
+}
+
+.popup-content {
+    background-color: #450f0f;
+    border: 2px solid #601414;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+    color: #ffb3b3;
+}
+
+.popup-content h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.popup-content p {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.popup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffb3b3;
+    color: #450f0f;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.popup-button:hover {
+    background-color: #ffe5e5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive Popup */
+@media screen and (max-width: 768px) {
+    .ticket-popup {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .popup-content {
+        max-width: none;
+        text-align: center;
+    }
+
+    .popup-button {
+        width: 100%;
+        text-align: center;
+    }
+}
