@@ -151,7 +151,7 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(88, 20, 20, 0.7), rgba(88, 20, 20, 0.9));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
     z-index: 2;
 }
 
@@ -162,8 +162,8 @@ nav ul li a.active {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgba(88, 20, 20, 0.8);
+    z-index: 3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     font-family: 'Rusty Attack Demo', sans-serif;
 }
 
@@ -230,7 +230,7 @@ nav ul li a.active {
     margin: 2rem auto;
     padding: 1rem;
     max-width: 800px;
-    border: 2px solid #601414;
+    border: 2px solid #480c0c;
     border-radius: 10px;
     background-color: #450f0f;
 }
@@ -240,7 +240,7 @@ nav ul li a.active {
     margin: 2rem auto;
     padding: 2rem;
     max-width: 600px;
-    border: 2px solid #601414;
+    border: 2px solid #480c0c;
     border-radius: 15px;
     background-color: #450f0f;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -1029,7 +1029,7 @@ select {
     margin: 2rem auto;
     padding: 2rem;
     max-width: 800px;
-    border: 2px solid #601414;
+    border: 2px solid #480c0c;
     border-radius: 15px;
     background-color: #450f0f;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -1069,7 +1069,7 @@ select {
 .booking-form textarea,
 .booking-form select {
     padding: 0.75rem;
-    border: 2px solid #601414;
+    border: 2px solid #480c0c;
     border-radius: 8px;
     background-color: #ffffff;
     font-family: 'Hedvig Letters Serif', serif;
@@ -1092,7 +1092,7 @@ select {
 
 .booking-form button {
     padding: 1rem 2rem;
-    background-color: #601414;
+    background-color: #480c0c;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -1139,7 +1139,7 @@ main {
 
 .popup-content {
     background-color: #450f0f;
-    border: 2px solid #601414;
+    border: 2px solid #480c0c;
     border-radius: 10px;
     padding: 20px;
     max-width: 300px;
@@ -1224,5 +1224,39 @@ main {
     .popup-button {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* Forms Container */
+.forms-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-form,
+.booking-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0;
+}
+
+/* Mobile Responsive Forms */
+@media screen and (max-width: 768px) {
+    .forms-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .contact-form,
+    .booking-form {
+        width: 100%;
+        max-width: none;
     }
 }
