@@ -147,18 +147,13 @@ nav ul li a.active {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #ffffff;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.banner-text h1 {
-    font-size: 3rem;
+.banner-text img {
+    max-width: 80%;
+    height: auto;
     margin-bottom: 1rem;
-}
-
-.banner-text p {
-    font-size: 1.5rem;
 }
 
 /* Overlay to make text more readable */
