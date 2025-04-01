@@ -50,10 +50,19 @@
 @media screen and (max-width: 768px) {
     header {
         padding: 1rem;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .logo-title {
+        position: relative;
+        z-index: 1001;
     }
 
     .mobile-nav-toggle {
         display: block;
+        position: relative;
+        z-index: 1001;
     }
 
     nav {
