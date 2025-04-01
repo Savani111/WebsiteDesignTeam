@@ -936,3 +936,26 @@ select {
         padding: 0;
     }
 }
+
+.learn-more {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffb3b3;
+    color: #450f0f;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more:hover {
+    background-color: #ffe5e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.learn-more:active {
+    transform: translateY(0);
+}
