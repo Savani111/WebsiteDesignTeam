@@ -149,19 +149,21 @@ nav ul li a.active {
     text-align: center;
     color: #ffffff;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: 'UnifrakturMaguntia', cursive;
+    text-shadow: 2px 2px 4px rgba(88, 20, 20, 0.8);
+    font-family: 'Metal Mania', cursive;
 }
 
 .banner-text h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     margin-bottom: 1rem;
-    font-family: 'UnifrakturMaguntia', cursive;
+    font-family: 'Metal Mania', cursive;
+    letter-spacing: 2px;
 }
 
 .banner-text p {
     font-size: 2.5rem;
-    font-family: 'UnifrakturMaguntia', cursive;
+    font-family: 'Metal Mania', cursive;
+    letter-spacing: 1px;
 }
 
 /* Overlay to make text more readable */
@@ -994,4 +996,4 @@ select {
 @import url('https://fonts.googleapis.com/css2?family=Celandine&display=swap');
 
 /* Import Gothic font */
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
