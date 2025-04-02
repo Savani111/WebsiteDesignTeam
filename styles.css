@@ -1379,12 +1379,12 @@ main {
 }
 
 /* Position the tour locations */
-.queensbury { top: 23%; left: 82%; }  /* Upper NY near Lake George */
-.corfu { top: 24%; left: 79%; }      /* Western NY near Buffalo */
-.agawam { top: 24%; left: 84%; }     /* Western MA near Springfield */
-.jackson { top: 29%; left: 82%; }    /* Central NJ */
-.woodmore { top: 31%; left: 81%; }   /* MD near DC */
-.gurnee { top: 24%; left: 69%; }     /* Northern IL near Chicago */
+.queensbury { top: 15%; left: 87%; }  /* Upper NY near Lake George */
+.corfu { top: 17%; left: 83%; }      /* Western NY near Buffalo */
+.agawam { top: 16%; left: 89%; }     /* Western MA near Springfield */
+.jackson { top: 22%; left: 86%; }    /* Central NJ */
+.woodmore { top: 25%; left: 84%; }   /* MD near DC */
+.gurnee { top: 17%; left: 71%; }     /* Northern IL near Chicago */
 
 /* Tour Dates Section */
 .tour-dates {
