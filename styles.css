@@ -394,6 +394,9 @@ form button:hover {
 .album {
     width: 200px;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
 }
 
 .album img {
@@ -403,11 +406,11 @@ form button:hover {
     transition: transform 0.3s ease;
 }
 
-.album img:hover {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
+.album:hover {
+    transform: translateY(-5px);
+}
+
+.album:hover img {
     transform: scale(1.05);
 }
 
@@ -416,7 +419,9 @@ form button:hover {
     font-size: 1rem;
     margin-top: 10px;
     text-transform: lowercase;
+    color: #ffffff;
 }
+
 .member-container {
     display: flex;
     align-items: center;
@@ -1323,7 +1328,7 @@ main {
     background-color: #450f0f;
     border: 2px solid #480c0c;
     border-radius: 8px;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     color: #ffffff;
     font-family: 'Hedvig Letters Serif', serif;
     white-space: nowrap;
@@ -1334,6 +1339,33 @@ main {
     top: 25px;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+}
+
+.location-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.location-info p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.buy-tickets-btn {
+    display: inline-block;
+    background-color: #480c0c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.buy-tickets-btn:hover {
+    background-color: #7a1919;
 }
 
 .tour-location:hover .location-info {
@@ -1347,12 +1379,12 @@ main {
 }
 
 /* Position the tour locations */
-.queensbury { top: 25%; left: 85%; }
-.corfu { top: 20%; left: 85%; }
-.agawam { top: 30%; left: 90%; }
-.jackson { top: 35%; left: 85%; }
-.woodmore { top: 40%; left: 80%; }
-.gurnee { top: 30%; left: 45%; }
+.queensbury { top: 22%; left: 75%; }  /* Adjusted for NY */
+.corfu { top: 24%; left: 72%; }      /* Adjusted for NY */
+.agawam { top: 23%; left: 78%; }     /* Adjusted for MA */
+.jackson { top: 28%; left: 76%; }    /* Adjusted for NJ */
+.woodmore { top: 30%; left: 74%; }   /* Adjusted for MD */
+.gurnee { top: 25%; left: 60%; }     /* Adjusted for IL */
 
 /* Tour Dates Section */
 .tour-dates {
