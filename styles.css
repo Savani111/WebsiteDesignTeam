@@ -422,7 +422,7 @@ form button:hover {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin: 2rem auto;
+    margin: 0 auto; /* Remove top and bottom margin */
     max-width: 80%;
 }
 
@@ -531,6 +531,7 @@ footer .social-media a img:hover {
         flex-direction: column;
         max-width: 90%;
         gap: 1rem;
+        margin: 0 auto; /* Keep no margin on mobile */
     }
 
     .member-container .member-image,
@@ -540,11 +541,11 @@ footer .social-media a img:hover {
     }
 
     .member-container .member-image {
-        order: 2; /* Move image after the name */
+        order: 2;
     }
 
     .member-container .member-info {
-        order: 1; /* Move info before the image */
+        order: 1;
     }
 
     .member-container .member-info h2 {
@@ -1288,6 +1289,10 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #581414;
+    border: 2px solid #480c0c;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .us-map {
@@ -1300,6 +1305,7 @@ main {
     position: absolute;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .location-dot {
@@ -1325,11 +1331,14 @@ main {
     transform: translateY(10px);
     transition: all 0.3s ease;
     z-index: 3;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .tour-location:hover .location-info {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .tour-location:hover .location-dot {
@@ -1396,10 +1405,16 @@ main {
 @media screen and (max-width: 768px) {
     .map-container {
         height: 400px;
+        margin: 0 1rem;
     }
 
     .location-info {
         font-size: 0.9rem;
+    }
+
+    .location-dot {
+        width: 15px;
+        height: 15px;
     }
 
     .tour-dates li {
