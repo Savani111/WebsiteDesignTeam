@@ -1379,12 +1379,12 @@ main {
 }
 
 /* Position the tour locations */
-.queensbury { top: 22%; left: 75%; }  /* Adjusted for NY */
-.corfu { top: 24%; left: 72%; }      /* Adjusted for NY */
-.agawam { top: 23%; left: 78%; }     /* Adjusted for MA */
-.jackson { top: 28%; left: 76%; }    /* Adjusted for NJ */
-.woodmore { top: 30%; left: 74%; }   /* Adjusted for MD */
-.gurnee { top: 25%; left: 60%; }     /* Adjusted for IL */
+.queensbury { top: 42%; left: 82%; }  /* Upper NY */
+.corfu { top: 44%; left: 79%; }      /* Western NY */
+.agawam { top: 43%; left: 84%; }     /* Western MA */
+.jackson { top: 48%; left: 82%; }    /* Central NJ */
+.woodmore { top: 50%; left: 80%; }   /* MD near DC */
+.gurnee { top: 45%; left: 65%; }     /* Northern IL */
 
 /* Tour Dates Section */
 .tour-dates {
