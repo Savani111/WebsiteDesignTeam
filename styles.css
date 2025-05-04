@@ -187,18 +187,24 @@ nav ul li a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    text-align: center;
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem;
+    background-color: #581414;
 }
 
 .tour-inspo-image {
-    max-width: 80%;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tour-inspo-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
 }
 
 /*Moves the tour text separate from the images*/
@@ -1337,4 +1343,13 @@ main {
     .tour-dates li {
         font-size: 1rem;
     }
+}
+
+.unsubscribe-note {
+    font-size: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.8;
+    font-style: italic;
 }
