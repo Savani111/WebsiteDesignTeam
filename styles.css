@@ -125,13 +125,13 @@ nav ul li a.active {
     text-align: center;
 }
 
-/* Video Banner */
+/* Tour Banner */
 .tour-banner {
     position: relative;
     width: 100%;
     height: 60vh;
     overflow: hidden;
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0;
     margin-bottom: 2rem;
 }
 
@@ -181,133 +181,7 @@ nav ul li a.active {
     letter-spacing: 1px;
 }
 
-/* Tour Map Section styles to be removed */
-.tour-map-section {
-    text-align: center;
-    padding: 2rem;
-    background-color: #581414;
-}
-
-.tour-map-section h2 {
-    color: #ffffff;
-    margin-bottom: 2rem;
-    font-family: 'Hedvig Letters Serif', serif;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.map-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 600px;
-    margin: 0 auto;
-    background-image: url('images/us-map.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #581414;
-    border: 2px solid #480c0c;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.us-map {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.tour-location {
-    position: absolute;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
-    text-decoration: none;
-    color: inherit;
-}
-
-.location-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #ffb3b3;
-    border: 2px solid #480c0c;
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-}
-
-.location-info {
-    position: absolute;
-    background-color: #450f0f;
-    border: 2px solid #480c0c;
-    border-radius: 8px;
-    padding: 0.75rem;
-    color: #ffffff;
-    font-family: 'Hedvig Letters Serif', serif;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 3;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.tour-location:hover .location-info {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
-.tour-location:hover .location-dot {
-    background-color: #ffe5e5;
-    transform: scale(1.2);
-}
-
-/* Position the tour locations */
-.queensbury { top: 25%; left: 82%; }  /* Upper NY near Lake George */
-.corfu { top: 26%; left: 78%; }      /* Western NY near Buffalo */
-.agawam { top: 26%; left: 85%; }     /* Western MA near Springfield */
-.jackson { top: 30%; left: 82%; }    /* Central NJ */
-.woodmore { top: 33%; left: 80%; }   /* MD near DC */
-.gurnee { top: 26%; left: 68%; }     /* Northern IL near Chicago */
-
-.buy-tickets-btn {
-    display: inline-block;
-    background-color: #480c0c;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-    margin-top: 0.5rem;
-}
-
-.buy-tickets-btn:hover {
-    background-color: #7a1919;
-}
-
-/* Mobile Responsive Map */
-@media screen and (max-width: 768px) {
-    .map-container {
-        height: 400px;
-        margin: 0 1rem;
-    }
-
-    .location-info {
-        font-size: 0.9rem;
-    }
-
-    .location-dot {
-        width: 10px;
-        height: 10px;
-    }
-}
-
-/* Keep the tour inspiration section styles */
+/* Tour Inspiration */
 .tour-inspiration {
     display: flex;
     flex-direction: column;
