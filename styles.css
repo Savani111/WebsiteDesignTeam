@@ -184,7 +184,6 @@ nav ul li a.active {
 /* Tour Inspiration */
 .tour-inspiration {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -195,16 +194,15 @@ nav ul li a.active {
 .tour-inspo-image {
     width: 100%;
     max-width: 800px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
 }
 
 .tour-inspo-image img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
     display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /*Moves the tour text separate from the images*/
