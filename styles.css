@@ -191,13 +191,13 @@ nav ul li a.active {
     background-color: #581414;
 }
 
-.tour-inspo-image {
+.tour-inspo-container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.tour-inspo-image img {
+.tour-inspo-container img {
     width: 100%;
     height: auto;
     display: block;

@@ -117,56 +117,56 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookingForm = document.getElementById('bookingForm');
 
     if (emailForm) {
-        emailForm.addEventListener('submit', function(e) {
+        emailForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             const formData = new FormData(emailForm);
             
-            fetch(emailForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
+            try {
+                const response = await fetch(emailForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
                 if (response.ok) {
                     alert('Thank you for joining our email list!');
                     emailForm.reset();
                 } else {
                     throw new Error('Network response was not ok');
                 }
-            })
-            .catch(error => {
-                alert('There was a problem submitting the form. Please try again later.');
+            } catch (error) {
                 console.error('Error:', error);
-            });
+                alert('There was a problem submitting the form. Please try again later.');
+            }
         });
     }
 
     if (bookingForm) {
-        bookingForm.addEventListener('submit', function(e) {
+        bookingForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             const formData = new FormData(bookingForm);
             
-            fetch(bookingForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
+            try {
+                const response = await fetch(bookingForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
                 if (response.ok) {
                     alert('Thank you for your booking request! We will get back to you soon.');
                     bookingForm.reset();
                 } else {
                     throw new Error('Network response was not ok');
                 }
-            })
-            .catch(error => {
-                alert('There was a problem submitting the form. Please try again later.');
+            } catch (error) {
                 console.error('Error:', error);
-            });
+                alert('There was a problem submitting the form. Please try again later.');
+            }
         });
     }
 });
